@@ -10,6 +10,7 @@
 library(shiny)
 library(tidyverse)
 library(tidytext)
+library(formattable)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
