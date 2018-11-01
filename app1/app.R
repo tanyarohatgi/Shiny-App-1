@@ -40,11 +40,12 @@ server <- function(input, output) {
    output$distPlot <- renderPlot({
       
      read_rds("saved.rds") %>%
-       ggplot(aes(country_2016, total_companies, size = country_sales_2016)) + geom_point(color = "blue") +
-       xlab("Country") + ylab("Total No. of Companies") + theme_minimal() + theme(legend.position="bottom") +
-       labs(size = "Total Arms Sales by Total T100 Companies in a Country (millions of $)") + 
+       ggplot(aes(country_2016, total_companies, fill = country_sales_2016)) + geom_col() +
+       xlab("Country") + ylab("Total No. of Companies") + theme_minimal() + theme(legend.position="right") +
+       labs(fill = "Total Arms Sales\n(millions of $)") + 
        ggtitle("Concentration of Top 100 Military Manufacturing Companies by Country") +
-       labs(subtitle = "A look at which countries have the most Top 100 companies, and how much they earn in arms sales.")
+       labs(subtitle = "A look at which countries have the most Top 100 companies, and how much they earn in arms sales.") +
+       scale_fill_gradient2(low = "white", high = "lightseagreen", mid = "turquoise", midpoint = 108000)
       
    })
 }
