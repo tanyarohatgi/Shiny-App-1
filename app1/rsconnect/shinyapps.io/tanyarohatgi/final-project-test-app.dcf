@@ -1,0 +1,12 @@
+name: final-project-test-app
+title: final-project-test-app
+username:
+account: tanyarohatgi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 546798
+bundleId: 1676515
+url: https://tanyarohatgi.shinyapps.io/final-project-test-app/
+when: 1541080838.3459
+asMultiple: FALSE
+asStatic: FALSE
