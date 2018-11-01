@@ -42,7 +42,7 @@ server <- function(input, output) {
      read_rds("saved.rds") %>%
        ggplot(aes(country_2016, total_companies, size = country_sales_2016)) + geom_point(color = "blue") +
        xlab("Country") + ylab("Total No. of Companies") + theme_minimal() + theme(legend.position="bottom") +
-       labs(size = "Total Arms Sales by Total T100 Companies in a Country ($)") + 
+       labs(size = "Total Arms Sales by Total T100 Companies in a Country (millions of $)") + 
        ggtitle("Concentration of Top 100 Military Manufacturing Companies by Country") +
        labs(subtitle = "A look at which countries have the most Top 100 companies, and how much they earn in arms sales.")
       
